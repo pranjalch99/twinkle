@@ -1,0 +1,6 @@
+{
+  "name": "Somewhere Between the Bass & You",
+  "description": "A personal Goa story and 27th birthday celebration for Twinkle, created by Pranjal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

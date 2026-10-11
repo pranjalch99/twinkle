@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <radialGradient id="embraceGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#991b1b" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#450a0a" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0a0a0c" stop-opacity="1" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="#0d0d11" />
+  <rect width="800" height="1200" fill="url(#embraceGlow)" />
+  <!-- Warm lights and close embrace silhouette -->
+  <circle cx="400" cy="500" r="140" fill="#ef4444" opacity="0.2" filter="blur(30px)" />
+  <ellipse cx="400" cy="650" rx="100" ry="190" fill="#060608" />
+  <circle cx="390" cy="480" r="38" fill="#08080c" />
+  <circle cx="420" cy="495" r="36" fill="#050508" />
+  <!-- Subtle typography label -->
+  <rect x="0" y="1040" width="800" height="160" fill="black" fill-opacity="0.65" />
+  <text x="400" y="1100" fill="#f4eee5" font-family="sans-serif" font-size="28" font-weight="600" text-anchor="middle" letter-spacing="2">THE DANCE FLOOR GOODBYE</text>
+  <text x="400" y="1140" fill="#a7a0a0" font-family="sans-serif" font-size="18" text-anchor="middle">Kissing you goodbye before Aura</text>
+</svg>

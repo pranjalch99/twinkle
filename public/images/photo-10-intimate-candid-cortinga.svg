@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <radialGradient id="terraceSun" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.9" />
+      <stop offset="45%" stop-color="#fed7aa" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#292524" stop-opacity="1" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="#1c1917" />
+  <rect width="800" height="1200" fill="url(#terraceSun)" />
+  <!-- Bamboo ceiling rafters -->
+  <line x1="0" y1="120" x2="800" y2="240" stroke="#78350f" stroke-width="8" opacity="0.4" />
+  <line x1="0" y1="180" x2="800" y2="300" stroke="#78350f" stroke-width="8" opacity="0.4" />
+  <line x1="0" y1="240" x2="800" y2="360" stroke="#78350f" stroke-width="8" opacity="0.4" />
+  <!-- Sunflowers hint -->
+  <circle cx="700" cy="180" r="28" fill="#f59e0b" />
+  <circle cx="700" cy="180" r="14" fill="#78350f" />
+  <!-- Two faces close together in tender daylight candid -->
+  <ellipse cx="320" cy="880" rx="95" ry="120" fill="#44403c" />
+  <circle cx="340" cy="790" r="60" fill="#57534e" />
+  <ellipse cx="480" cy="890" rx="100" ry="130" fill="#292524" />
+  <circle cx="460" cy="800" r="65" fill="#44403c" />
+  <!-- Footer -->
+  <rect x="0" y="1040" width="800" height="160" fill="black" fill-opacity="0.65" />
+  <text x="400" y="1100" fill="#f4eee5" font-family="sans-serif" font-size="28" font-weight="600" text-anchor="middle" letter-spacing="2">CAFÉ CORTINGA &amp; BEACH</text>
+  <text x="400" y="1140" fill="#fde68a" font-family="sans-serif" font-size="18" text-anchor="middle">When the music faded and it was just us</text>
+</svg>
