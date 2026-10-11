@@ -7,8 +7,19 @@ export interface StoryChapterData {
   location: string;
   paragraphs: string[];
   pullQuote?: string;
-  photoIds: string[];
+  photoIds?: string[];
   theme: 'dark' | 'paper' | 'deep-noir';
+  privateFootnote: {
+    label: string;
+    note: string;
+    quote: string;
+  };
+  metric: {
+    value: string;
+    label: string;
+    sublabel: string;
+  };
+  vibeTag: string;
 }
 
 export const DEDICATION = {
@@ -30,7 +41,7 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
     chapterNumber: '01',
     chapterLabel: 'THE UNLIKELY BEGINNING',
     date: 'October 2, 2026 · Goa',
-    location: 'Goa Pre-Rave',
+    location: 'Anjuna Pre-Rave',
     title: 'It started with paneer and rice.',
     paragraphs: [
       'I was sitting with the boys before the rave, waiting for our food order to arrive—paneer and rice, of all things—and scrolling through Hinge mostly because I was bored and killing time.',
@@ -39,8 +50,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'Romance, apparently, begins with dinner plans, high hopes, and questionable screen time.',
     ],
     pullQuote: 'Romance, apparently, begins with dinner plans and questionable screen time.',
-    photoIds: ['photo-07'],
     theme: 'dark',
+    vibeTag: 'Pre-Rave Anticipation · Anjuna',
+    metric: {
+      value: '3 for 3',
+      label: 'Compatibility Check',
+      sublabel: 'Gorgeous + Techno Baddie + Fellow SDE',
+    },
+    privateFootnote: {
+      label: 'Pranjal’s Mind at Dinner',
+      note: 'I actually stared at my screen for two full minutes wondering what line would make an impression. The DM was sent with very little expectation because you seemed way out of reach, but sometimes taking the chance is the only move.',
+      quote: '“Even with the cold initial reply, I was quietly glad I shot my shot.”',
+    },
   },
   {
     id: 'chapter-02',
@@ -56,8 +77,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'We danced together from 6:00 to 6:30 AM, and those thirty minutes simply evaporated. We smiled, we flirted, we moved to the bass. When you had to leave, I kissed you goodbye. Then you invited me to the afterparty at Aura—and even though I wasn’t initially planning on it, the moment you asked, I just had to go.',
     ],
     pullQuote: 'Those thirty minutes simply evaporated. We danced, we smiled, and suddenly the night had an entirely different centre of gravity.',
-    photoIds: ['photo-01', 'photo-02', 'photo-09'],
     theme: 'dark',
+    vibeTag: 'Dynamo Red Lights · 128 BPM Techno',
+    metric: {
+      value: '30 Mins',
+      label: 'Time on Dance Floor',
+      sublabel: 'Felt like 3 seconds · 6:00 AM to 6:30 AM',
+    },
+    privateFootnote: {
+      label: 'Behind The Scenes at 6:15 AM',
+      note: 'When you walked in through that red lighting, I completely forgot about the rest of the club. And when you invited me to Aura afterparty, there was zero hesitation—the boys and I paid the entry fee without a grumble just to be where you were.',
+      quote: '“I kissed you goodbye as you left Dynamo, but my night was already rewired around you.”',
+    },
   },
   {
     id: 'chapter-03',
@@ -73,8 +104,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'By the time I walked down those stairs, I had arrived at a very simple, unavoidable conclusion: I needed to take you out on a proper date.',
     ],
     pullQuote: 'By then, I had reached a fairly simple conclusion. I needed to take you on a proper date.',
-    photoIds: ['photo-05'],
     theme: 'dark',
+    vibeTag: 'Sunrise Terrace · Ozran Cliff',
+    metric: {
+      value: '8:00 AM',
+      label: 'Stayed Till Sunrise',
+      sublabel: 'Effortlessly convinced us to stay for quiet talks',
+    },
+    privateFootnote: {
+      label: 'Pranjal’s Morning Revelation',
+      note: 'Waiting until 7:00 AM in a club isn’t something I normally do for anyone. But the moment you walked onto that terrace and we leaned against the railing in the morning sunlight, every minute of waiting made total sense.',
+      quote: '“Plenty of people were around, but you were the only one I kept scanning the room for.”',
+    },
   },
   {
     id: 'chapter-04',
@@ -90,8 +131,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'You and Puppet were stressing over your upcoming birthday party at Titlee, but even in that tension, there was something undeniably sweet about the way you held everything together.',
     ],
     pullQuote: 'And somewhere between the music, the humidity, and the chaos of Goa, I found myself wanting to know the person behind that beautiful face.',
-    photoIds: ['photo-04', 'photo-08'],
     theme: 'dark',
+    vibeTag: 'Nihala’s Set & Patrick at Hilltop',
+    metric: {
+      value: '60 Mins',
+      label: 'Wait Time with Zero Complaints',
+      sublabel: 'When you like someone, patience comes easy',
+    },
+    privateFootnote: {
+      label: 'Standing Outside Waiting',
+      note: 'Most people would get annoyed waiting an hour. I just smiled to myself, listened to the distant beats, and felt happy that the date was happening at all. And seeing you show up for your DJ friends made me respect you even more.',
+      quote: '“Seeing you in your element was worth every minute of the wait.”',
+    },
   },
   {
     id: 'chapter-05',
@@ -108,8 +159,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'I barely slept myself—I had an important 10:00 AM meeting to run. I handled my call, woke you up gently so you could check out, and helped you get sorted for your next stay.',
     ],
     pullQuote: 'Somewhere between the music and the sea, I stopped thinking about the night and started thinking about you.',
-    photoIds: ['photo-10'],
     theme: 'paper',
+    vibeTag: 'Secret Beach Lane · Waves & Beers',
+    metric: {
+      value: '3x Weight',
+      label: 'Gym Strength vs Goa Sand',
+      sublabel: 'Lost all friction in the tide, gained a core memory',
+    },
+    privateFootnote: {
+      label: 'The Sand Slip & The Cuddle',
+      note: 'I will never live down that sand slip! I deadlift heavy in the gym, but that wet sand betrayed me right as I went for the cinematic hero lift haha. But lying next to you after, fighting the urge to kiss you so you could get your sleep—that was pure warmth.',
+      quote: '“Holding you was the easiest thing in the world. Rushing to a 10 AM client call right after... not so much.”',
+    },
   },
   {
     id: 'chapter-06',
@@ -124,8 +185,19 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'You were already juggling a hundred moving parts, organizing your own party, and handling the stress—and yet you made sure my people were welcomed as your people.',
       'I notice the little things. And that small gesture said so much about who you are.',
     ],
-    photoIds: [],
+    pullQuote: 'I notice the little things. And that small gesture said so much about who you are.',
     theme: 'paper',
+    vibeTag: 'Café Cortinga Breakfast · Morning Sun',
+    metric: {
+      value: 'All Boys',
+      label: 'Titlee Guest List',
+      sublabel: 'Welcomed my crew like your own lifelong friends',
+    },
+    privateFootnote: {
+      label: 'Over Morning Coffee',
+      note: 'Most people in the middle of birthday stress would barely remember someone they met two nights ago. You took care of my friends without even having to think twice. It was one of the sweetest gestures of the trip.',
+      quote: '“That quiet kindness told me more about your heart than anything else.”',
+    },
   },
   {
     id: 'chapter-07',
@@ -141,8 +213,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'For one crazy second, I genuinely debated canceling my flight and staying in Goa. My friends would have murdered me on the spot, but the thought crossed my mind nonetheless. I found you, hugged you tight, and kissed you goodbye.',
     ],
     pullQuote: 'For a second I considered canceling my flight. My friends would have killed me, but you had made it very hard to leave.',
-    photoIds: ['photo-03'],
     theme: 'dark',
+    vibeTag: 'Titlee Crimson Lighting · Birthday Girl Sash',
+    metric: {
+      value: '27th',
+      label: 'Milestone Birthday',
+      sublabel: 'Black dress, birthday sash & legendary composure',
+    },
+    privateFootnote: {
+      label: 'Pandey’s Living Room at 3:30 AM',
+      note: 'Standing by the door watching the clock tick toward my 4:30 AM cab, I actually opened the airline app to see what it would cost to stay another 48 hours. The rational side of my brain won, but only barely.',
+      quote: '“You made it very, very hard to get into that airport cab.”',
+    },
   },
   {
     id: 'chapter-08',
@@ -159,8 +241,18 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'You wished me a safe flight. And standing there with my boarding pass, I knew right then: we weren’t done yet.',
     ],
     pullQuote: 'One last message from Goa. One more reason to look forward to what comes next.',
-    photoIds: ['photo-06'],
     theme: 'deep-noir',
+    vibeTag: 'Airport Gate · 5:08 AM Departure Text',
+    metric: {
+      value: '5:08 AM',
+      label: 'The Airport Text',
+      sublabel: '“if it’s meant to be, we will cross paths again <33”',
+    },
+    privateFootnote: {
+      label: 'Standing Under the Boarding Screen',
+      note: 'The terminal was cold and fluorescent after five days of warm bass and humid air. Typing out that WhatsApp text was my way of keeping the door open. When you replied wishing me a safe flight with that warm signoff, I smiled all the way to my seat.',
+      quote: '“Walking onto the plane, I already knew Mumbai was on my schedule.”',
+    },
   },
   {
     id: 'chapter-09',
@@ -180,7 +272,17 @@ export const STORY_CHAPTERS: StoryChapterData[] = [
       'Until then, you have Mumbai, I have Bhopal, and we have this piece of Goa that no flight home can take away. Happy 27th birthday, Twinkle.',
     ],
     pullQuote: 'Here’s to finding out what happens when the music fades, the sun comes up, and two people decide to meet one more time.',
-    photoIds: [],
     theme: 'paper',
+    vibeTag: 'Bhopal to Mulund West · November 22 Countdown',
+    metric: {
+      value: 'Nov 22',
+      label: 'Reunion in Mumbai',
+      sublabel: 'Marked on the calendar with extra excitement',
+    },
+    privateFootnote: {
+      label: 'Writing this from Bhopal',
+      note: 'Building this web app was the most fun project I worked on all year. Every line of code, every memory token, and every quote came straight from that week in Goa. Can’t wait to see your smile in Mumbai.',
+      quote: '“See you on November 22, Twinkle.”',
+    },
   },
 ];

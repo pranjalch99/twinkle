@@ -1,19 +1,17 @@
 import React from 'react';
 import { WaveformMotif } from './WaveformMotif';
-import { PhotoItem } from '../data/photos';
-import { ChevronDown, Sparkles } from 'lucide-react';
+import { ChevronDown, Sparkles, MapPin, Music2, HeartHandshake, Compass } from 'lucide-react';
 
 interface HeroProps {
-  featuredPhoto?: PhotoItem;
-  onSelectPhoto: (photo: PhotoItem) => void;
-  customSrcMap: Record<string, string>;
+  onStartStory: () => void;
+  onExploreMap: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ featuredPhoto, onSelectPhoto, customSrcMap }) => {
+export const Hero: React.FC<HeroProps> = ({ onStartStory, onExploreMap }) => {
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center overflow-hidden">
       {/* Subtle ambient background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-b from-[#682D3A]/20 via-[#B88C91]/10 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-b from-[#682D3A]/25 via-[#B88C91]/10 to-transparent blur-3xl pointer-events-none -z-10" />
 
       {/* Top Kicker Label */}
       <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#D5BD9B] font-medium mb-6">
@@ -38,48 +36,75 @@ export const Hero: React.FC<HeroProps> = ({ featuredPhoto, onSelectPhoto, custom
         A gift of gratitude &amp; love for Twinkle · Created by Pranjal
       </p>
 
-      {/* Waveform Sound Motif */}
+      {/* Live Interactive Melodic Techno Soundscape */}
       <div className="mt-8">
-        <WaveformMotif label="Goa Soundscapes · Dynamo &amp; Hilltop" />
+        <WaveformMotif label="Goa Soundscapes · CamelPhat Ambience" />
       </div>
 
-      {/* Teaser Photograph Frame */}
-      {featuredPhoto && (
-        <div className="mt-12 max-w-xs sm:max-w-sm mx-auto w-full">
-          <div
-            onClick={() => onSelectPhoto(featuredPhoto)}
-            className="group cursor-pointer p-2 rounded-lg bg-[#18171B]/90 border border-[#A7A0A0]/20 shadow-2xl hover:border-[#D5BD9B]/50 transition-all duration-300"
-          >
-            <div className="relative aspect-[4/5] rounded overflow-hidden bg-[#101014]">
-              <img
-                src={(() => {
-                  const raw = customSrcMap[featuredPhoto.id] || featuredPhoto.filename;
-                  if (raw.startsWith('data:') || raw.startsWith('http://') || raw.startsWith('https://')) return raw;
-                  const clean = raw.startsWith('/') ? raw.slice(1) : raw;
-                  const base = import.meta.env.BASE_URL || './';
-                  return base.endsWith('/') ? `${base}${clean}` : `${base}/${clean}`;
-                })()}
-                alt={featuredPhoto.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#101014] via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-3 inset-x-3 text-left">
-                <p className="text-[11px] font-mono uppercase text-[#D5BD9B]">Featured Memory</p>
-                <p className="text-xs font-serif text-[#F4EEE5] line-clamp-1">{featuredPhoto.title}</p>
-              </div>
-            </div>
+      {/* Interactive Milestone Cards Bar */}
+      <div className="mt-12 max-w-2xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full text-left">
+        <div className="p-3.5 sm:p-4 rounded-xl bg-[#18171B]/90 border border-[#A7A0A0]/15 shadow-xl hover:border-[#D5BD9B]/40 transition-colors">
+          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase text-[#D5BD9B] tracking-wider mb-1">
+            <MapPin className="w-3 h-3 text-[#B88C91]" />
+            <span>Oct 2–6</span>
           </div>
+          <p className="text-sm font-serif font-medium text-[#F4EEE5]">Goa Coastline</p>
+          <p className="text-[11px] text-[#A7A0A0]">Dynamo to Titlee</p>
         </div>
-      )}
+
+        <div className="p-3.5 sm:p-4 rounded-xl bg-[#18171B]/90 border border-[#A7A0A0]/15 shadow-xl hover:border-[#D5BD9B]/40 transition-colors">
+          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase text-[#D5BD9B] tracking-wider mb-1">
+            <Sparkles className="w-3 h-3 text-[#B88C91]" />
+            <span>Oct 6</span>
+          </div>
+          <p className="text-sm font-serif font-medium text-[#F4EEE5]">27th Birthday</p>
+          <p className="text-[11px] text-[#A7A0A0]">Birthday Girl Sash</p>
+        </div>
+
+        <div className="p-3.5 sm:p-4 rounded-xl bg-[#18171B]/90 border border-[#A7A0A0]/15 shadow-xl hover:border-[#D5BD9B]/40 transition-colors">
+          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase text-[#D5BD9B] tracking-wider mb-1">
+            <HeartHandshake className="w-3 h-3 text-[#B88C91]" />
+            <span>Nov 22</span>
+          </div>
+          <p className="text-sm font-serif font-medium text-[#F4EEE5]">Next Chapter</p>
+          <p className="text-[11px] text-[#A7A0A0]">Mulund West, Mumbai</p>
+        </div>
+
+        <div className="p-3.5 sm:p-4 rounded-xl bg-[#18171B]/90 border border-[#A7A0A0]/15 shadow-xl hover:border-[#D5BD9B]/40 transition-colors">
+          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase text-[#D5BD9B] tracking-wider mb-1">
+            <Music2 className="w-3 h-3 text-[#B88C91]" />
+            <span>Soundtrack</span>
+          </div>
+          <p className="text-sm font-serif font-medium text-[#F4EEE5]">124 BPM</p>
+          <p className="text-[11px] text-[#A7A0A0]">Melodic Techno</p>
+        </div>
+      </div>
+
+      {/* Interactive Action Shortcuts */}
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <button
+          onClick={onStartStory}
+          className="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-[#682D3A] to-[#8A3B4D] hover:from-[#7A3444] hover:to-[#9E4458] shadow-lg shadow-[#682D3A]/30 transition-all hover:scale-105"
+        >
+          Begin The Journey
+        </button>
+
+        <button
+          onClick={onExploreMap}
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-medium uppercase tracking-wider text-[#F4EEE5] bg-[#18171B] border border-[#A7A0A0]/25 hover:border-[#D5BD9B]/50 hover:bg-[#201F25] transition-all"
+        >
+          <Compass className="w-3.5 h-3.5 text-[#D5BD9B]" />
+          <span>Explore Goa Map</span>
+        </button>
+      </div>
 
       {/* Scroll prompt */}
-      <div className="mt-14 flex flex-col items-center gap-2">
+      <div className="mt-12 flex flex-col items-center gap-2">
         <a
           href="#dedication"
           className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#D5BD9B] hover:text-white transition-colors group"
         >
-          <span>Our story begins here</span>
+          <span>Read dedication &amp; memories</span>
           <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" />
         </a>
       </div>
